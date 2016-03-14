@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AptechSchoolModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Curriculum">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CurriculumName" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Dormitories">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DormitoriesName" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Educational">
+          <Key>
+            <PropertyRef Name="EId" />
+          </Key>
+          <Property Name="EId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EducationalName" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Grade">
+          <Key>
+            <PropertyRef Name="GId" />
+          </Key>
+          <Property Name="GId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GradeName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Nation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NationName" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="SchoolClass">
+          <Key>
+            <PropertyRef Name="ClassId" />
+          </Key>
+          <Property Name="ClassId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClassName" Type="nvarchar" MaxLength="200" />
+          <Property Name="GradeId" Type="int" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="SId" />
+          </Key>
+          <Property Name="SId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SName" Type="nvarchar" MaxLength="50" />
+          <Property Name="SSex" Type="nvarchar" MaxLength="8" />
+          <Property Name="SBornDate" Type="datetime" />
+          <Property Name="SAge" Type="int" />
+          <Property Name="SCardNumber" Type="nvarchar" MaxLength="18" />
+          <Property Name="SGrade" Type="int" />
+          <Property Name="SPhone" Type="nvarchar" MaxLength="20" />
+          <Property Name="SEducational" Type="int" />
+          <Property Name="SAddress" Type="nvarchar(max)" />
+          <Property Name="SPolitical" Type="nvarchar" MaxLength="50" />
+          <Property Name="SClass" Type="int" />
+          <Property Name="SPicture" Type="nvarchar(max)" />
+          <Property Name="SEntrance" Type="datetime" />
+          <Property Name="SDormitories" Type="int" />
+          <Property Name="SQQNumber" Type="nchar" MaxLength="20" />
+          <Property Name="SCurriculum" Type="int" />
+        </EntityType>
+        <EntityContainer Name="AptechSchoolModelStoreContainer">
+          <EntitySet Name="Curriculum" EntityType="Self.Curriculum" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Dormitories" EntityType="Self.Dormitories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Educational" EntityType="Self.Educational" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Grade" EntityType="Self.Grade" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Nation" EntityType="Self.Nation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SchoolClass" EntityType="Self.SchoolClass" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AptechSchoolModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Curriculum">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CurriculumName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Dormitory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DormitoriesName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Educational">
+          <Key>
+            <PropertyRef Name="EId" />
+          </Key>
+          <Property Name="EId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EducationalName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Grade">
+          <Key>
+            <PropertyRef Name="GId" />
+          </Key>
+          <Property Name="GId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GradeName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Nation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NationName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SchoolClass">
+          <Key>
+            <PropertyRef Name="ClassId" />
+          </Key>
+          <Property Name="ClassId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClassName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="GradeId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="SId" />
+          </Key>
+          <Property Name="SId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SSex" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="SBornDate" Type="DateTime" Precision="3" />
+          <Property Name="SAge" Type="Int32" />
+          <Property Name="SCardNumber" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+          <Property Name="SGrade" Type="Int32" />
+          <Property Name="SPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SEducational" Type="Int32" />
+          <Property Name="SAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SPolitical" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SClass" Type="Int32" />
+          <Property Name="SPicture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SEntrance" Type="DateTime" Precision="3" />
+          <Property Name="SDormitories" Type="Int32" />
+          <Property Name="SQQNumber" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="SCurriculum" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="AptechSchoolEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Curricula" EntityType="Self.Curriculum" />
+          <EntitySet Name="Dormitories" EntityType="Self.Dormitory" />
+          <EntitySet Name="Educationals" EntityType="Self.Educational" />
+          <EntitySet Name="Grades" EntityType="Self.Grade" />
+          <EntitySet Name="Nations" EntityType="Self.Nation" />
+          <EntitySet Name="SchoolClasses" EntityType="Self.SchoolClass" />
+          <EntitySet Name="Students" EntityType="Self.Student" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AptechSchoolModelStoreContainer" CdmEntityContainer="AptechSchoolEntities">
+          <EntitySetMapping Name="Curricula">
+            <EntityTypeMapping TypeName="AptechSchoolModel.Curriculum">
+              <MappingFragment StoreEntitySet="Curriculum">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CurriculumName" ColumnName="CurriculumName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Dormitories">
+            <EntityTypeMapping TypeName="AptechSchoolModel.Dormitory">
+              <MappingFragment StoreEntitySet="Dormitories">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DormitoriesName" ColumnName="DormitoriesName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Educationals">
+            <EntityTypeMapping TypeName="AptechSchoolModel.Educational">
+              <MappingFragment StoreEntitySet="Educational">
+                <ScalarProperty Name="EId" ColumnName="EId" />
+                <ScalarProperty Name="EducationalName" ColumnName="EducationalName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Grades">
+            <EntityTypeMapping TypeName="AptechSchoolModel.Grade">
+              <MappingFragment StoreEntitySet="Grade">
+                <ScalarProperty Name="GId" ColumnName="GId" />
+                <ScalarProperty Name="GradeName" ColumnName="GradeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nations">
+            <EntityTypeMapping TypeName="AptechSchoolModel.Nation">
+              <MappingFragment StoreEntitySet="Nation">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NationName" ColumnName="NationName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SchoolClasses">
+            <EntityTypeMapping TypeName="AptechSchoolModel.SchoolClass">
+              <MappingFragment StoreEntitySet="SchoolClass">
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="GradeId" ColumnName="GradeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="AptechSchoolModel.Student">
+              <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="SId" ColumnName="SId" />
+                <ScalarProperty Name="SName" ColumnName="SName" />
+                <ScalarProperty Name="SSex" ColumnName="SSex" />
+                <ScalarProperty Name="SBornDate" ColumnName="SBornDate" />
+                <ScalarProperty Name="SAge" ColumnName="SAge" />
+                <ScalarProperty Name="SCardNumber" ColumnName="SCardNumber" />
+                <ScalarProperty Name="SGrade" ColumnName="SGrade" />
+                <ScalarProperty Name="SPhone" ColumnName="SPhone" />
+                <ScalarProperty Name="SEducational" ColumnName="SEducational" />
+                <ScalarProperty Name="SAddress" ColumnName="SAddress" />
+                <ScalarProperty Name="SPolitical" ColumnName="SPolitical" />
+                <ScalarProperty Name="SClass" ColumnName="SClass" />
+                <ScalarProperty Name="SPicture" ColumnName="SPicture" />
+                <ScalarProperty Name="SEntrance" ColumnName="SEntrance" />
+                <ScalarProperty Name="SDormitories" ColumnName="SDormitories" />
+                <ScalarProperty Name="SQQNumber" ColumnName="SQQNumber" />
+                <ScalarProperty Name="SCurriculum" ColumnName="SCurriculum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
