@@ -80,6 +80,12 @@
     <Compile Include="Control\Educational\EducationalInfo.Designer.cs">
       <DependentUpon>EducationalInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control\Student\StudentFind.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\Student\StudentFind.Designer.cs">
+      <DependentUpon>StudentFind.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Student\MainClassManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\Student\StudentFind.resx">
+      <DependentUpon>StudentFind.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Student\MainClassManager.resx">
       <DependentUpon>MainClassManager.cs</DependentUpon>

@@ -69,6 +69,7 @@
           <Property Name="SDormitories" Type="int" />
           <Property Name="SQQNumber" Type="nchar" MaxLength="20" />
           <Property Name="SCurriculum" Type="int" />
+          <Property Name="SRemark" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="AptechSchoolModelStoreContainer">
           <EntitySet Name="Curriculum" EntityType="Self.Curriculum" Schema="dbo" store:Type="Tables" />
@@ -148,6 +149,7 @@
           <Property Name="SDormitories" Type="Int32" />
           <Property Name="SQQNumber" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
           <Property Name="SCurriculum" Type="Int32" />
+          <Property Name="SRemark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="AptechSchoolEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Curricula" EntityType="Self.Curriculum" />
@@ -233,6 +235,7 @@
                 <ScalarProperty Name="SDormitories" ColumnName="SDormitories" />
                 <ScalarProperty Name="SQQNumber" ColumnName="SQQNumber" />
                 <ScalarProperty Name="SCurriculum" ColumnName="SCurriculum" />
+                <ScalarProperty Name="SRemark" ColumnName="SRemark" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

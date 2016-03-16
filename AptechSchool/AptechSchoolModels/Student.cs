@@ -31,5 +31,6 @@ namespace AptechSchoolModels
         public Nullable<int> SDormitories { get; set; }
         public string SQQNumber { get; set; }
         public Nullable<int> SCurriculum { get; set; }
+        public string SRemark { get; set; }
     }
 }

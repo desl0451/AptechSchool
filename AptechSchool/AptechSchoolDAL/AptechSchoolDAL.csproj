@@ -56,7 +56,7 @@
     <Compile Include="DBHelper.cs" />
     <Compile Include="Class\SchoolclassServers.cs" />
     <Compile Include="Educational\EducationalServers.cs" />
-    <Compile Include="Student\UserServers.cs" />
+    <Compile Include="Student\StudentServers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

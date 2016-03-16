@@ -1,7 +1,18 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AptechSchool.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">gridColumn1</Value>
+    </Setting>
+    <Setting Name="SName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">gridColumn2</Value>
+    </Setting>
+    <Setting Name="SSex" Type="System.String" Scope="User">
+      <Value Profile="(Default)">gridColumn3</Value>
+    </Setting>
+    <Setting Name="SBornDate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">gridColumn4</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

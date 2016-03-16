@@ -46,7 +46,7 @@ namespace AptechSchool
              InitNavBar();
             //UpdateMainGalleryContent(forceProcess);
 
-            UserServices ss = new UserServices();
+            StudentServices ss = new StudentServices();
             usersList = ss.GetALLUsers();
         }
 

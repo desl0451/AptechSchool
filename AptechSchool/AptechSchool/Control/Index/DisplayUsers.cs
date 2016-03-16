@@ -32,7 +32,7 @@ namespace AptechSchool
         private void LoadData()
         {
             //ViewData.Clear();
-            bool forceProcess = false;
+            //bool forceProcess = false;
             //判断文件是否存在
             //if (File.Exists(ViewDataFile))
             //{
@@ -46,7 +46,7 @@ namespace AptechSchool
             //InitNavBar();
             //UpdateMainGalleryContent(forceProcess);
 
-            UserServices ss = new UserServices();
+            StudentServices ss = new StudentServices();
             usersList = ss.GetALLUsers();
         }
 

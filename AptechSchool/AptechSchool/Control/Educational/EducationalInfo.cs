@@ -19,10 +19,11 @@ namespace AptechSchool
         public EducationalInfo()
         {
             InitializeComponent();
-            Init();
+         
         }
         private void Init()
         {
+
             EducationalServices eduServices = new EducationalServices();
             ComboBoxItemCollection coll = comboBoxEdit1.Properties.Items;
             coll.BeginUpdate();
@@ -33,8 +34,6 @@ namespace AptechSchool
                 {
                     coll.Add(edu.EducationalName);
                 }
-
-
             }
             finally
             {
@@ -46,6 +45,11 @@ namespace AptechSchool
 
 
 
+        }
+
+        private void EducationalInfo_Load(object sender, EventArgs e)
+        {
+            Init();
         }
     }
 }

@@ -36,7 +36,10 @@ namespace AptechSchool
 
         private void accordionControlElement3_Click(object sender, EventArgs e)
         {
-
+            StudentFind stu = new StudentFind();
+            panelControl1.Controls.Clear();
+            stu.Dock = DockStyle.Fill;
+            panelControl1.Controls.Add(stu);
         }
 
         private void accordionControlElement4_Click(object sender, EventArgs e)
@@ -46,10 +49,7 @@ namespace AptechSchool
 
         private void accordionControlElement2_Click(object sender, EventArgs e)
         {
-            DisplayUsers duser = new DisplayUsers();
-            panelControl1.Controls.Clear();
-            duser.Dock = DockStyle.Fill;
-            panelControl1.Controls.Add(duser);
+    
         }
 
         private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)

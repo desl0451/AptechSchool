@@ -37,7 +37,7 @@ namespace AptechSchoolDAL
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
 
             return className;
